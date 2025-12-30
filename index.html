@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Good Vibe — Discovery</title>
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./main.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="#" aria-label="Discovery home">
+          <span class="brand__mark" aria-hidden="true">◉</span>
+          <span class="brand__name">Good Vibe</span>
+        </a>
+        <nav class="topbar__nav" aria-label="Primary">
+          <a class="btn btn--ghost" href="#" data-action="login">Log in</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <section class="hero" aria-label="Discover">
+          <h1 class="hero__title">Discover communities</h1>
+          <p class="hero__subtitle">
+            or
+            <a class="link" href="#" data-action="create">create your own</a>
+          </p>
+
+          <div class="search" role="search">
+            <span class="search__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18">
+                <path
+                  d="M10.5 3a7.5 7.5 0 105.07 13.01l3.21 3.21a1 1 0 001.42-1.42l-3.21-3.21A7.5 7.5 0 0010.5 3zm0 2a5.5 5.5 0 110 11 5.5 5.5 0 010-11z"
+                />
+              </svg>
+            </span>
+            <input
+              id="q"
+              class="search__input"
+              type="search"
+              inputmode="search"
+              placeholder="Search for anything"
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <button class="search__clear" type="button" aria-label="Clear search" data-action="clear-search">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path
+                  d="M12 2a10 10 0 100 20 10 10 0 000-20zm3.54 13.12a1 1 0 01-1.41 1.42L12 13.41l-2.12 2.13a1 1 0 01-1.41-1.42L10.59 12 8.46 9.88a1 1 0 011.41-1.42L12 10.59l2.12-2.13a1 1 0 011.41 1.42L13.41 12l2.13 2.12z"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="chips" aria-label="Categories">
+            <div class="chips__scroller" id="chips"></div>
+            <button class="chips__more btn btn--ghost" type="button" data-action="chips-more" aria-label="Scroll categories">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path d="M8 5l8 7-8 7V5z" />
+              </svg>
+            </button>
+          </div>
+        </section>
+
+        <section class="results" aria-label="Results">
+          <div class="results__meta">
+            <div class="muted" id="resultCount" aria-live="polite"></div>
+            <div class="results__right">
+              <label class="select" aria-label="Sort">
+                <span class="select__label muted">Sort</span>
+                <select id="sort">
+                  <option value="rank">Rank</option>
+                  <option value="members_desc">Members (desc)</option>
+                  <option value="name_asc">Name (A→Z)</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="grid" id="grid" aria-live="polite"></div>
+
+          <nav class="pagination" aria-label="Pagination" id="pagination"></nav>
+        </section>
+
+        <footer class="footer">
+          <div class="muted">
+            This is a lightweight mock inspired by a discovery page layout. No third‑party HTML/CSS is copied verbatim.
+          </div>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>
+
+
